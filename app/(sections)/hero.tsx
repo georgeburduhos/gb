@@ -24,14 +24,15 @@ export function HeroSection() {
               className="text-lg leading-relaxed mb-6 max-w-2xl"
               style={{ color: "var(--text-2)" }}
             >
-              16+ years building for mobile — React Native, Expo, iOS, Android. Because I use
-              Expo across all my projects, the web version comes naturally: one codebase, all
-              platforms. Experienced across fintech, blockchain, media, and enterprise.
+              16+ years shipping mobile products — React Native, Expo, iOS, Android. One
+              codebase across all platforms: native apps, web, and PWAs from a single
+              TypeScript source. Delivered in fintech, blockchain, media, and enterprise.
             </p>
 
             <p className="text-base leading-relaxed mb-5 max-w-2xl" style={{ color: "var(--text-2)" }}>
-              Comfortable with the full stack — TypeScript, Node.js, REST APIs, CI/CD — and
-              hands-on with AI/LLM integration where it genuinely improves the product.
+              Full-stack capable — TypeScript, Node.js, REST APIs, CI/CD — and hands-on
+              with LLM integration: Claude, OpenAI, streaming APIs, on-device inference.
+              AI where it earns its place, not as a feature flag.
             </p>
 
             <p className="text-sm mb-8 max-w-2xl" style={{ color: "var(--text-3)" }}>
@@ -53,7 +54,7 @@ export function HeroSection() {
             </div>
 
             <div className="flex flex-wrap gap-2">
-              {["React Native", "Expo", "iOS · Android · Web", "TypeScript", "Node.js", "AI Integration"].map((t) => (
+              {["React Native", "Expo", "iOS · Android · Web · PWA", "TypeScript", "Node.js", "LLM Integration", "Claude · OpenAI"].map((t) => (
                 <span
                   key={t}
                   className="text-xs px-3 py-1.5 rounded-full border font-medium"
