@@ -18,7 +18,6 @@ export function Nav() {
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];
-
     const sectionVisibility: Record<string, number> = {};
 
     LINKS.forEach(({ id }) => {
@@ -58,24 +57,24 @@ export function Nav() {
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 px-6"
+      className="fixed top-0 left-0 right-0 z-50 px-4 md:px-6"
       style={{
         background: "var(--bg)",
         borderBottom: "1px solid var(--border-subtle)",
       }}
     >
-      <div className="max-w-[1100px] mx-auto h-16 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2.5">
-          <Image src="/logo.png" alt="George Burduhos" width={32} height={32} />
-          <span className="font-semibold text-sm tracking-tight" style={{ color: "var(--text)" }}>
+      <div className="max-w-[1100px] mx-auto h-14 md:h-16 flex items-center justify-between gap-4">
+        <a href="#" className="flex items-center gap-2 flex-shrink-0">
+          <Image src="/logo.png" alt="George Burduhos" width={28} height={28} />
+          <span className="font-semibold text-sm tracking-tight hidden sm:block" style={{ color: "var(--text)" }}>
             George Burduhos
           </span>
         </a>
 
-        <nav ref={navRef} className="hidden md:flex items-center gap-8 relative">
-          {/* Sliding pill indicator */}
+        <nav ref={navRef} className="flex items-center gap-5 md:gap-8 relative overflow-x-auto">
+          {/* Sliding indicator — desktop only */}
           <span
-            className="absolute bottom-[-20px] h-[2px] rounded-full transition-all duration-300 ease-out"
+            className="absolute bottom-[-18px] h-[2px] rounded-full transition-all duration-300 ease-out hidden md:block"
             style={{
               left: indicatorStyle.left,
               width: indicatorStyle.width,
@@ -91,7 +90,7 @@ export function Nav() {
                 key={link.href}
                 href={link.href}
                 ref={(el) => { linkRefs.current[link.id] = el; }}
-                className="text-sm transition-colors duration-200"
+                className="text-sm whitespace-nowrap transition-colors duration-200"
                 style={{ color: isActive ? "var(--text)" : "var(--text-2)" }}
               >
                 {link.label}

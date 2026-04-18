@@ -23,9 +23,9 @@ export function StackSection() {
 
         <div className="space-y-5">
           {Object.entries(byCategory).map(([category, skills]) => (
-            <div key={category} className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <div key={category} className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-x-4">
               <span
-                className="text-xs font-mono uppercase tracking-widest w-24 flex-shrink-0"
+                className="text-xs font-mono uppercase tracking-widest sm:w-24 flex-shrink-0"
                 style={{ color: "var(--text-3)" }}
               >
                 {category}

@@ -71,7 +71,7 @@ export function HeroSection() {
           </div>
 
           {/* Right — stats */}
-          <div className="flex flex-row lg:flex-col gap-4 lg:gap-3 flex-wrap">
+          <div className="flex flex-row lg:flex-col gap-3 flex-wrap">
             {[
               { value: "16+", label: "Years in mobile" },
               { value: "7+", label: "Years React Native" },
@@ -79,7 +79,7 @@ export function HeroSection() {
             ].map((stat) => (
               <div
                 key={stat.label}
-                className="rounded-xl border p-5 text-center min-w-[130px]"
+                className="rounded-xl border p-4 text-center flex-1 lg:flex-none min-w-[100px]"
                 style={{
                   background: "var(--bg-2)",
                   borderColor: "var(--border-subtle)",
