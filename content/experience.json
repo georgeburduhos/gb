@@ -1,0 +1,78 @@
+[
+  {
+    "id": "nda-2023",
+    "company": null,
+    "role": "React Native Developer",
+    "period": "2023 – Present",
+    "location": null,
+    "nda": true,
+    "description": "Working on multiple client projects — all React Native, all started from scratch. Projects span fintech, retail, and enterprise verticals. Using Expo for deployment to App Store and Google Play. Building reusable white-label component systems and enforcing strict TypeScript patterns across teams.",
+    "stack": ["React Native", "Expo", "TypeScript", "Expo EAS", "REST APIs", "CI/CD"],
+    "highlights": [
+      "Multiple production apps shipped to App Store and Google Play",
+      "Built white-label component library for rapid product iteration",
+      "Latest libraries and architecture patterns throughout"
+    ]
+  },
+  {
+    "id": "tiexo",
+    "company": "Tiexo",
+    "role": "Full Stack Engineer",
+    "period": "May 2021 – Dec 2022",
+    "location": "Cluj-Napoca",
+    "nda": false,
+    "description": "Developed Tiexo, an NFT data aggregator on the Solana blockchain. Owned the full technical scope — from blockchain parsing to the marketplace REST API and the Next.js front end.",
+    "stack": ["Solana", "TypeScript", "Next.js", "Node.js", "MongoDB", "PostgreSQL", "REST API"],
+    "highlights": [
+      "Implemented full blockchain parsing, transaction building and publishing",
+      "Built the REST API for marketplace modules (MongoDB + PostgreSQL)",
+      "Delivered both the aggregator and marketplace from scratch"
+    ]
+  },
+  {
+    "id": "moonlet",
+    "company": "Moonlet",
+    "role": "React Native Developer",
+    "period": "Oct 2019 – Dec 2022",
+    "location": null,
+    "nda": false,
+    "description": "Built Moonlet, a non-custodial cryptocurrency wallet supporting multiple blockchains. Delivered the React Native app for iOS, Android, and a Chrome extension, plus a highly scalable backend for remote screen composition.",
+    "stack": ["React Native", "TypeScript", "Solana", "Ethereum", "Zilliqa", "Near", "Node.js", "Chrome Extension"],
+    "highlights": [
+      "Non-custodial wallet with multi-blockchain support (Solana, Zilliqa, Ethereum, Near)",
+      "Built React Native app for iOS, Android and Chrome Extension",
+      "Scalable backend for on-the-fly remote screen rendering via network responses"
+    ]
+  },
+  {
+    "id": "soundmix",
+    "company": "Soundmix",
+    "role": "React Native Developer & Technical Lead",
+    "period": "Sep 2018 – Jul 2019",
+    "location": null,
+    "nda": false,
+    "description": "Developed Soundmix, a live video streaming app for DJs. Led the mobile and backend team end-to-end — from recruiting and onboarding to implementing CI/CD pipelines.",
+    "stack": ["React Native", "Node.js", "Video Streaming", "CI/CD"],
+    "highlights": [
+      "Led mobile and backend team — recruiting, training, architecture decisions",
+      "Spearheaded the switch from manual pipelines to CI/CD",
+      "Delivered live video streaming for mobile DJs"
+    ]
+  },
+  {
+    "id": "freelance-ios",
+    "company": null,
+    "role": "iOS Developer · Team Lead · Project Manager",
+    "period": "2008 – 2018",
+    "location": null,
+    "nda": false,
+    "freelance": true,
+    "description": "Ten years building iOS applications as a freelancer and contractor. Worked across a wide range of clients and projects — from consumer apps to enterprise tools. Progressively moved into team lead and project management roles, overseeing delivery from spec to App Store.",
+    "stack": ["iOS", "Objective-C", "Swift", "Xcode", "App Store"],
+    "highlights": [
+      "iOS developer from the early App Store era",
+      "Grew into team lead and project manager roles over time",
+      "Wide range of clients: consumer, media, and enterprise verticals"
+    ]
+  }
+]
