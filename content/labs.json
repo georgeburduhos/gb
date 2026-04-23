@@ -1,36 +1,9 @@
 [
   {
-    "id": "moonlet",
-    "title": "Moonlet",
-    "tagline": "Non-custodial crypto wallet, multiple blockchains.",
-    "summary": "A React Native cryptocurrency wallet supporting Solana, Ethereum, Zilliqa, and Near. Delivered iOS, Android, and a Chrome Extension from a single codebase.",
-    "stack": ["React Native", "TypeScript", "Solana", "Ethereum", "Node.js"],
-    "link": "https://moonlet.io",
-    "status": "shipped"
-  },
-  {
-    "id": "tiexo",
-    "title": "Tiexo",
-    "tagline": "NFT data aggregator on Solana.",
-    "summary": "Full-stack NFT marketplace and data aggregator. Owned blockchain parsing, transaction building, REST API, and Next.js front end from zero to production.",
-    "stack": ["Solana", "Next.js", "Node.js", "MongoDB", "PostgreSQL"],
-    "link": null,
-    "status": "shipped"
-  },
-  {
-    "id": "soundmix",
-    "title": "Soundmix",
-    "tagline": "Live video streaming for DJs.",
-    "summary": "Mobile-first live streaming platform for DJs. Led the full team — product spec, development, recruitment, CI/CD, and delivery.",
-    "stack": ["React Native", "Node.js", "Video Streaming", "CI/CD"],
-    "link": null,
-    "status": "shipped"
-  },
-  {
     "id": "statsos",
     "title": "StatsOS",
     "tagline": "Health analytics from wearable data.",
-    "summary": "Side project in beta. Processes Whoop exports and surfaces insights on recovery, sleep, and strain — with AI-generated summaries. Built with React, Expo (web), and LLM integration.",
+    "summary": "Processes Whoop exports and surfaces insights on recovery, sleep, and strain — with AI-generated summaries. Built with React, Expo (web), and LLM integration.",
     "stack": ["React", "Expo Web", "TypeScript", "AI / LLM", "Data viz"],
     "link": "https://statsos.io",
     "status": "beta"
@@ -39,7 +12,7 @@
     "id": "dayos",
     "title": "DayOS",
     "tagline": "Output-focused daily OS.",
-    "summary": "Side project in beta. A personal productivity system built around daily output — task management, journaling, and planning with AI assistance at its core. React + Expo (web).",
+    "summary": "A personal productivity system built around daily output — task management, journaling, and planning with AI assistance at its core. React + Expo (web).",
     "stack": ["React", "Expo Web", "TypeScript", "AI / LLM", "Supabase"],
     "link": "https://dayos.io",
     "status": "beta"

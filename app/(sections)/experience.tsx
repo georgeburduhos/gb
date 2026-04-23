@@ -11,9 +11,13 @@ type Engagement = {
   freelance?: boolean;
   description: string;
   stack: string[];
+  tags?: string[];
 };
 
 export function ExperienceSection() {
+  const main = (experienceData as Engagement[]).filter((e) => e.id !== "freelance-ios");
+  const freelance = (experienceData as Engagement[]).find((e) => e.id === "freelance-ios");
+
   return (
     <section id="experience" className="py-20 px-6" style={{ background: "var(--bg-2)" }}>
       <div className="max-w-[1100px] mx-auto">
@@ -46,16 +50,14 @@ export function ExperienceSection() {
         </div>
 
         <div className="relative">
-          {/* Timeline line */}
           <div
             className="absolute left-[7px] top-2 bottom-2 w-px hidden md:block"
             style={{ background: "var(--border)" }}
           />
 
-          <div className="space-y-5">
-            {(experienceData as Engagement[]).map((eng) => (
+          <div className="space-y-3">
+            {main.map((eng) => (
               <div key={eng.id} className="md:pl-10 relative">
-                {/* Timeline dot */}
                 <div
                   className="absolute left-0 top-4 w-3.5 h-3.5 rounded-full border-2 hidden md:block"
                   style={{
@@ -65,7 +67,7 @@ export function ExperienceSection() {
                 />
 
                 <div
-                  className="rounded-xl border p-5"
+                  className="rounded-xl border p-4"
                   style={{
                     background: "var(--bg)",
                     borderColor: "var(--border-subtle)",
@@ -103,6 +105,19 @@ export function ExperienceSection() {
                   </p>
 
                   <div className="flex flex-wrap gap-1.5">
+                    {eng.tags?.map((t) => (
+                      <span
+                        key={t}
+                        className="text-xs px-2 py-0.5 rounded border"
+                        style={{
+                          color: "var(--text-2)",
+                          borderColor: "var(--border)",
+                          background: "var(--bg-3)",
+                        }}
+                      >
+                        {t}
+                      </span>
+                    ))}
                     {eng.stack.map((s) => (
                       <span
                         key={s}
@@ -120,6 +135,23 @@ export function ExperienceSection() {
                 </div>
               </div>
             ))}
+
+            {/* Freelance iOS — minimal row */}
+            {freelance && (
+              <div className="md:pl-10 relative">
+                <div
+                  className="absolute left-0 top-2.5 w-3.5 h-3.5 rounded-full border-2 hidden md:block"
+                  style={{ background: "var(--bg)", borderColor: "var(--border)" }}
+                />
+                <div className="flex flex-wrap items-center gap-2 py-2 text-sm" style={{ color: "var(--text-3)" }}>
+                  <span className="font-mono text-xs">{freelance.period}</span>
+                  <span>·</span>
+                  <span>{freelance.role}</span>
+                  <span>·</span>
+                  <span>iOS, Objective-C, Swift</span>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

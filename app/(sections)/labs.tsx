@@ -12,36 +12,21 @@ type Project = {
 };
 
 export function LabsSection() {
-  const shipped = (labsData as Project[]).filter((p) => p.status === "shipped");
   const building = (labsData as Project[]).filter((p) => p.status === "beta");
 
   return (
     <section id="projects" className="py-20 px-6">
       <div className="max-w-[1100px] mx-auto">
         <p className="text-xs font-mono uppercase tracking-[0.15em] mb-2" style={{ color: "var(--accent)" }}>
-          Selected Projects
-        </p>
-        <h2 className="text-3xl font-semibold tracking-tight mb-3" style={{ color: "var(--text)" }}>
-          Built and shipped.
-        </h2>
-        <p className="text-sm leading-relaxed mb-10 max-w-2xl" style={{ color: "var(--text-3)" }}>
-          A selection of projects I can talk about publicly. There are 4–5 more in production
-          that I can&apos;t present due to NDA — happy to discuss them in a call.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-12">
-          {shipped.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
-
-        {/* Currently building */}
-        <p className="text-xs font-mono uppercase tracking-[0.15em] mb-2" style={{ color: "var(--accent)" }}>
           Currently Building
         </p>
-        <h3 className="text-xl font-semibold tracking-tight mb-8" style={{ color: "var(--text)" }}>
+        <h2 className="text-3xl font-semibold tracking-tight mb-3" style={{ color: "var(--text)" }}>
           Personal AI projects.
-        </h3>
+        </h2>
+        <p className="text-sm leading-relaxed mb-10 max-w-2xl" style={{ color: "var(--text-3)" }}>
+          Side projects I&apos;m actively building and using — both in public beta.
+        </p>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
           {building.map((project) => (
             <ProjectCard key={project.id} project={project} />
@@ -63,18 +48,16 @@ function ProjectCard({ project }: { project: Project }) {
           <h3 className="font-semibold text-sm" style={{ color: "var(--text)" }}>
             {project.title}
           </h3>
-          {project.status === "beta" && (
-            <span
-              className="text-xs px-2 py-0.5 rounded-full border"
-              style={{
-                color: "#2563eb",
-                background: "rgba(37,99,235,0.08)",
-                borderColor: "rgba(37,99,235,0.25)",
-              }}
-            >
-              beta
-            </span>
-          )}
+          <span
+            className="text-xs px-2 py-0.5 rounded-full border"
+            style={{
+              color: "var(--text-3)",
+              background: "var(--bg-2)",
+              borderColor: "var(--border)",
+            }}
+          >
+            beta
+          </span>
         </div>
         {project.link && (
           <a

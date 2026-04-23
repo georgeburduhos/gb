@@ -34,7 +34,6 @@
   --bg:   #0C1022;
   --bg-2: #131928;
   --bg-3: #1A2235;
-  --bg-4: #212B42;
 
   /* Borders — alpha white with blue tint */
   --border-subtle: rgba(255, 255, 255, 0.06);
@@ -56,9 +55,6 @@
   --radius-lg: 12px;
   --radius-xl: 20px;
 
-  /* Motion */
-  --ease:     cubic-bezier(0.22, 1, 0.36, 1);
-  --duration: 200ms;
 }
 
 @layer base {

@@ -1,0 +1,9 @@
+[
+  {
+    "id": "invoice-bot",
+    "title": "Invoice upload bot",
+    "problem": "Uploading receipts and invoices to solo.ro was a manual, multi-step process after every expense.",
+    "solution": "Telegram bot — send a photo or PDF, it uploads automatically via Playwright. Zero manual steps.",
+    "stack": ["Python", "Telegram API", "Playwright"]
+  }
+]
