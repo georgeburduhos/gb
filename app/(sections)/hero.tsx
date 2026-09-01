@@ -17,7 +17,7 @@ export function HeroSection() {
             </h1>
 
             <p className="text-base mb-6 font-medium" style={{ color: "var(--text-3)" }}>
-              Mobile · Web · AI Integration
+              Mobile · Web · Agentic AI Engineering
             </p>
 
             <p
@@ -30,9 +30,9 @@ export function HeroSection() {
             </p>
 
             <p className="text-base leading-relaxed mb-5 max-w-2xl" style={{ color: "var(--text-2)" }}>
-              Full-stack capable — TypeScript, Node.js, REST APIs, CI/CD — and hands-on
-              with LLM integration: Claude, OpenAI, streaming APIs, on-device inference.
-              AI where it earns its place, not as a feature flag.
+              Full-stack capable — TypeScript, Node.js, REST APIs, CI/CD — and increasingly
+              focused on AI Engineering: designing agentic workflows where specialized AI
+              agents build, review, and verify real work under explicit boundaries.
             </p>
 
             <p className="text-sm mb-8 max-w-2xl" style={{ color: "var(--text-3)" }}>
@@ -54,7 +54,7 @@ export function HeroSection() {
             </div>
 
             <div className="flex flex-wrap gap-2">
-              {["React Native", "Expo", "iOS · Android · Web · PWA", "TypeScript", "Node.js", "LLM Integration", "Claude · OpenAI"].map((t) => (
+              {["React Native", "Expo", "iOS · Android · Web · PWA", "TypeScript", "Node.js", "Agentic AI", "Claude · OpenAI"].map((t) => (
                 <span
                   key={t}
                   className="text-xs px-3 py-1.5 rounded-full border font-medium"

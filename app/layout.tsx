@@ -6,23 +6,23 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "George Burduhos — Cross-Platform Engineer — Mobile, Web & AI",
+  title: "George Burduhos — Software Engineer — Mobile, Web & Agentic AI",
   description:
-    "Cross-platform engineer based in Cluj-Napoca. React Native, Expo (mobile + web), iOS, Android, TypeScript, and AI integration — 16+ years in the field.",
+    "Senior software engineer based in Cluj-Napoca, 16+ years across mobile, web, and cross-platform engineering — now designing Agentic AI systems and AI Engineering workflows. React Native, Expo, TypeScript, multi-agent orchestration.",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://georgeburduhos.com",
     siteName: "George Burduhos",
-    title: "George Burduhos — Cross-Platform Engineer — Mobile, Web & AI",
+    title: "George Burduhos — Software Engineer — Mobile, Web & Agentic AI",
     description:
-      "Senior React Native developer based in Cluj-Napoca. 16+ years in mobile development.",
+      "Senior software engineer based in Cluj-Napoca, 16+ years across mobile, web, and cross-platform engineering — now designing Agentic AI systems and AI Engineering workflows.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "George Burduhos — Cross-Platform Engineer — Mobile, Web & AI",
+    title: "George Burduhos — Software Engineer — Mobile, Web & Agentic AI",
     description:
-      "Senior React Native developer based in Cluj-Napoca. 16+ years in mobile development.",
+      "Senior software engineer based in Cluj-Napoca, 16+ years across mobile, web, and cross-platform engineering — now designing Agentic AI systems and AI Engineering workflows.",
   },
   icons: {
     icon: [

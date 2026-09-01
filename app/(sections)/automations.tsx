@@ -77,6 +77,10 @@ export function AutomationsSection() {
             If I find myself doing something more than twice, I write code for it. The result is a
             growing set of personal tools — bots, dashboards, systems — that handle the repetitive
             work so I can focus on the hard parts. These aren&apos;t side projects. They run every day.
+            The same instinct, taken further, is what became{" "}
+            <a href="#siteworks" className="underline underline-offset-2 transition-colors hover:text-[var(--text)]">
+              Siteworks
+            </a>.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

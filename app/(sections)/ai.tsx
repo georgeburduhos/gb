@@ -1,19 +1,19 @@
 const AI_POINTS = [
   {
-    title: "API integration",
-    description: "Connecting LLMs (Claude, GPT-4, Gemini) to mobile apps — chat interfaces, content generation, smart search, contextual suggestions.",
+    title: "LLM integration",
+    description: "Connecting LLMs (Claude, GPT-4, Gemini) to products — chat interfaces, content generation, smart search, contextual suggestions.",
   },
   {
-    title: "Workflow automation",
-    description: "Using AI to automate repetitive engineering tasks: PR reviews, release notes, CI/CD decisions, test generation.",
+    title: "AI-assisted engineering",
+    description: "Using AI to automate parts of the engineering process itself: PR reviews, release notes, CI/CD decisions, test generation.",
+  },
+  {
+    title: "Agentic workflows & orchestration",
+    description: "Designing systems where specialized AI agents build, review, and verify real work under explicit roles and boundaries — see the Siteworks case study below.",
   },
   {
     title: "On-device & edge",
     description: "Integrating on-device ML models and edge inference for features that need to work offline or with low latency.",
-  },
-  {
-    title: "Practical, not hype",
-    description: "I add AI where it genuinely solves a problem — not as a feature checkbox. The product comes first.",
   },
 ];
 
@@ -22,16 +22,20 @@ export function AISection() {
     <section id="ai" className="py-20 px-6">
       <div className="max-w-[1100px] mx-auto">
         <p className="text-xs font-mono uppercase tracking-[0.15em] mb-2" style={{ color: "var(--accent)" }}>
-          AI & LLM Integration
+          AI Engineering
         </p>
         <h2 className="text-3xl font-semibold tracking-tight mb-4" style={{ color: "var(--text)" }}>
-          AI as a tool, not a headline.
+          From LLM integration to agentic engineering systems.
         </h2>
         <p className="text-base leading-relaxed mb-10 max-w-2xl" style={{ color: "var(--text-2)" }}>
-          Over the past two years I've worked hands-on with LLM APIs and AI-assisted
-          tooling — integrating them into mobile products and engineering workflows where
-          they genuinely add value. I'm comfortable owning this layer end-to-end alongside
-          the mobile work.
+          Three years ago this was calling LLM APIs from mobile apps. It's grown into
+          designing <span style={{ color: "var(--text)" }}>Agentic AI</span> systems — where
+          specialized agents research, build, review, and verify real work with defined
+          responsibilities, not a single model doing everything unsupervised.{" "}
+          <a href="#siteworks" className="underline underline-offset-2 transition-colors hover:text-[var(--text)]">
+            Siteworks
+          </a>{" "}
+          is the clearest evidence of that, below.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

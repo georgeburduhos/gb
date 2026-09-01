@@ -25,7 +25,7 @@ export function ExperienceSection() {
           Experience
         </p>
         <h2 className="text-3xl font-semibold tracking-tight mb-6" style={{ color: "var(--text)" }}>
-          16 years in mobile development.
+          16+ years in software engineering.
         </h2>
 
         <div

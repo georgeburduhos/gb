@@ -1,0 +1,62 @@
+{
+  "steps": [
+    {
+      "icon": "ScanSearch",
+      "num": "01",
+      "title": "Research & verify",
+      "desc": "Public sources checked and recorded before a line of copy is written — no invented services, prices, or history.",
+      "tag": null,
+      "accent": false
+    },
+    {
+      "icon": "Cpu",
+      "num": "02",
+      "title": "Build & orchestrate",
+      "desc": "Claude Code researches, designs, and implements — then deploys and self-reviews its own output.",
+      "tag": "Claude Code",
+      "accent": true
+    },
+    {
+      "icon": "Eye",
+      "num": "03",
+      "title": "Independent review",
+      "desc": "A separate, read-only session evaluates the live build against sources, brand, UX, and technical standards.",
+      "tag": "OpenAI Codex",
+      "accent": true
+    },
+    {
+      "icon": "GitCompare",
+      "num": "04",
+      "title": "Verify & remediate",
+      "desc": "Every finding is independently accepted or rejected with evidence — not applied automatically — then fixed.",
+      "tag": "Claude Code",
+      "accent": true
+    },
+    {
+      "icon": "CheckCircle2",
+      "num": "05",
+      "title": "Fresh review & QA",
+      "desc": "A new reviewer session checks the fixes, hunts for regressions, and clears the build for deployment.",
+      "tag": "deployment-ready",
+      "accent": false
+    }
+  ],
+  "principles": [
+    {
+      "title": "Shared standards",
+      "description": "Every project runs against the same written standards for design, content, SEO, and review behavior — not ad-hoc prompting per site."
+    },
+    {
+      "title": "Brand as constraint, design as freedom",
+      "description": "Real logos and established brand colors are preserved as hard constraints. Everything else about the design is free to change."
+    },
+    {
+      "title": "The builder doesn't grade its own work",
+      "description": "Codex reviews independently and read-only. Claude then evaluates each finding on its own merits rather than applying it blindly."
+    },
+    {
+      "title": "Execution boundaries",
+      "description": "The pipeline runs autonomously through research, build, review, and fix — but stops before anything that touches a real domain or live integration without sign-off."
+    }
+  ]
+}

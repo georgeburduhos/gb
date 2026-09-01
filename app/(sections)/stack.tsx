@@ -2,7 +2,7 @@ import stackData from "@/content/stack.json";
 
 type Skill = { id: string; label: string; category: string };
 
-const CATEGORY_ORDER = ["Mobile", "Language", "Backend", "Database", "Blockchain", "Testing", "DevOps", "Design", "Process"];
+const CATEGORY_ORDER = ["Mobile", "Language", "AI", "Backend", "Database", "Blockchain", "Testing", "DevOps", "Design", "Process"];
 
 export function StackSection() {
   const byCategory = CATEGORY_ORDER.reduce<Record<string, Skill[]>>((acc, cat) => {

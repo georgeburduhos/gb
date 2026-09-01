@@ -1,5 +1,6 @@
 import { HeroSection } from "./(sections)/hero";
 import { AISection } from "./(sections)/ai";
+import { SiteworksSection } from "./(sections)/siteworks";
 import { AutomationsSection } from "./(sections)/automations";
 import { ExperienceSection } from "./(sections)/experience";
 import { LabsSection } from "./(sections)/labs";
@@ -14,6 +15,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <AISection />
+        <SiteworksSection />
         <AutomationsSection />
         <ExperienceSection />
         <LabsSection />

@@ -4,7 +4,8 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
 const LINKS = [
-  { label: "AI", href: "#ai", id: "ai" },
+  { label: "AI Engineering", href: "#ai", id: "ai" },
+  { label: "Siteworks", href: "#siteworks", id: "siteworks" },
   { label: "Automations", href: "#automations", id: "automations" },
   { label: "Experience", href: "#experience", id: "experience" },
   { label: "Projects", href: "#projects", id: "projects" },
