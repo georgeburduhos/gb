@@ -1,0 +1,48 @@
+{
+  "components": [
+    {
+      "id": "core",
+      "title": "MYLO Core",
+      "status": "running",
+      "description": "The always-on service the other parts talk to: persistent scheduling with retries and missed-run recovery, an event log, incident tracking, and notifications that connected apps pick up."
+    },
+    {
+      "id": "companion",
+      "title": "macOS Companion",
+      "status": "running",
+      "description": "A native SwiftUI app for macOS — tasks, reminders, and an inbox of what needs attention. A morning briefing view is in progress."
+    },
+    {
+      "id": "scheduling",
+      "title": "Scheduled tasks & reminders",
+      "status": "running",
+      "description": "Recurring and one-off schedules that respect time zones and daylight saving, with reminders you complete, snooze, or skip from the macOS app."
+    },
+    {
+      "id": "monitoring",
+      "title": "Monitoring",
+      "status": "running",
+      "description": "Monitors a single background automation: detects when it is interrupted, opens an incident, and tracks it through to recovery."
+    },
+    {
+      "id": "integrations",
+      "title": "Integrations",
+      "status": "in-development",
+      "description": "Read-only connections to GitHub and GitLab, so review requests, failing CI pipelines, and merge conflicts land in MYLO's inbox."
+    },
+    {
+      "id": "mcp",
+      "title": "Conversational AI via MCP",
+      "status": "experimental",
+      "description": "An MCP server lets an AI assistant create and manage MYLO's tasks in conversation, using the same scheduling rules as the app."
+    }
+  ],
+  "stack": [
+    "Node.js",
+    "TypeScript",
+    "SQLite",
+    "Swift",
+    "SwiftUI",
+    "MCP"
+  ]
+}

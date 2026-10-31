@@ -1,44 +1,48 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
+const TITLE = "George Burduhos — Software Engineer";
+const DESCRIPTION =
+  "Software Engineer based in Cluj-Napoca, building mobile and web applications, automation systems, and software products. 16+ years across mobile, web, and cross-platform engineering — React Native, Expo, TypeScript, and AI & automation, from LLM integration to agentic engineering workflows.";
+
 export const metadata: Metadata = {
-  title: "George Burduhos — Software Engineer — Mobile, Web & Agentic AI",
-  description:
-    "Senior software engineer based in Cluj-Napoca, 16+ years across mobile, web, and cross-platform engineering — now designing Agentic AI systems and AI Engineering workflows. React Native, Expo, TypeScript, multi-agent orchestration.",
+  metadataBase: new URL("https://georgeburduhos.com"),
+  title: TITLE,
+  description: DESCRIPTION,
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://georgeburduhos.com",
     siteName: "George Burduhos",
-    title: "George Burduhos — Software Engineer — Mobile, Web & Agentic AI",
-    description:
-      "Senior software engineer based in Cluj-Napoca, 16+ years across mobile, web, and cross-platform engineering — now designing Agentic AI systems and AI Engineering workflows.",
+    title: TITLE,
+    description: DESCRIPTION,
   },
   twitter: {
     card: "summary_large_image",
-    title: "George Burduhos — Software Engineer — Mobile, Web & Agentic AI",
-    description:
-      "Senior software engineer based in Cluj-Napoca, 16+ years across mobile, web, and cross-platform engineering — now designing Agentic AI systems and AI Engineering workflows.",
-  },
-  icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.png", type: "image/png", sizes: "512x512" },
-    ],
-    apple: [
-      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
-    ],
-    shortcut: "/favicon.ico",
+    title: TITLE,
+    description: DESCRIPTION,
   },
   robots: {
     index: true,
     follow: true,
   },
 };
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FFFFFF" },
+    { media: "(prefers-color-scheme: dark)", color: "#070B12" },
+  ],
+};
+
+const THEME_SCRIPT = `(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();`;
 
 export default function RootLayout({
   children,
@@ -48,8 +52,12 @@ export default function RootLayout({
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${GeistSans.variable} ${GeistMono.variable} h-full antialiased`}
     >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_SCRIPT }} />
+      </head>
       <body className="min-h-full flex flex-col">
         {children}
         <Analytics />

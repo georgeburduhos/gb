@@ -1,6 +1,6 @@
 # georgeburduhos.com
 
-Personal portfolio site for [George Burduhos](https://georgeburduhos.com) — Cross-Platform Engineer specialising in React Native, Expo, and AI integration.
+Personal portfolio site for [George Burduhos](https://georgeburduhos.com) — Software Engineer — React Native, web development, AI & automation.
 
 ## Stack
 
@@ -14,21 +14,25 @@ Personal portfolio site for [George Burduhos](https://georgeburduhos.com) — Cr
 
 ```
 app/
-  (sections)/       # Hero, AI, Experience, Projects, Skills, Footer
-  globals.css       # Design tokens (colors, radius, motion)
-  layout.tsx        # Fonts, metadata, analytics
+  (sections)/       # Hero, Work, MYLO, AI, Siteworks, Automations, Skills, Footer
+  brand-tokens.css  # Brand identity tokens (verbatim from the brand package)
+  globals.css       # Site roles mapped onto brand tokens, shared component classes
+  layout.tsx        # Fonts, metadata, theme bootstrap, analytics
+  manifest.ts       # PWA manifest
   page.tsx          # Section composition
 components/
-  nav.tsx           # Fixed header with scroll-tracking active indicator
+  nav.tsx           # Fixed header, scroll-tracking indicator, mobile menu
+  theme-toggle.tsx  # Light/dark override (persisted)
+  flow-steps.tsx    # Step-flow used by Siteworks and the automation modal
 content/
-  experience.json   # Work history
-  labs.json         # Projects
+  work.json         # Selected work (product categories, no employers/dates)
+  mylo.json         # MYLO (featured personal project)
   stack.json        # Skills
 ```
 
 ## Design tokens
 
-All colors are derived from the logo palette — navy `#2E4380` for backgrounds, red `#C6252E` as accent. Tokens live in `app/globals.css` as CSS custom properties (`--bg`, `--text`, `--accent`, etc.).
+Brand identity v1.1 (1C.2 Precision mark; Electric Blue `#007BFF`, Violet `#7C3AED`, Soft Pink `#FF5A8A`; ink `#070B12`; Geist Sans + Geist Mono). `app/brand-tokens.css` holds the `--gb-*` tokens with light/dark themes (`data-theme` override, `prefers-color-scheme` default). `app/globals.css` maps site roles (`--bg`, `--text`, `--accent`, `--accent-text`, …) onto them. Logos live in `public/brand/` and must not be edited — replace them from the brand package.
 
 ## Local development
 
@@ -39,4 +43,4 @@ pnpm dev
 
 ## Content
 
-All content is data-driven from JSON files in `content/`. To update experience, projects, or skills — edit the relevant JSON file and push.
+All content is data-driven from JSON files in `content/`. To update work, MYLO, or skills — edit the relevant JSON file and push.

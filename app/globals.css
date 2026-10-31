@@ -1,14 +1,15 @@
 @import "tailwindcss";
+@import "./brand-tokens.css";
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
 @theme inline {
   --color-background: var(--bg);
   --color-foreground: var(--text);
   --color-border: var(--border);
-  --color-ring: var(--accent);
-  --color-primary: var(--accent);
-  --color-primary-foreground: #ffffff;
+  --color-ring: var(--gb-focus-ring);
+  --color-primary: var(--accent-fill);
+  --color-primary-foreground: var(--gb-on-accent);
   --color-muted: var(--bg-2);
   --color-muted-foreground: var(--text-3);
   --color-card: var(--bg);
@@ -18,59 +19,249 @@
   --color-secondary: var(--bg-2);
   --color-secondary-foreground: var(--text-2);
   --color-accent: var(--accent);
-  --color-accent-foreground: #ffffff;
+  --color-accent-foreground: var(--gb-on-accent);
   --color-destructive: #dc2626;
   --color-input: var(--bg-2);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-geist-sans), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
   --radius-sm: 4px;
-  --radius-md: 6px;
+  --radius-md: 8px;
   --radius-lg: 12px;
-  --radius-xl: 20px;
+  --radius-xl: 16px;
 }
 
+/* Site roles, mapped onto the brand tokens (app/brand-tokens.css). */
 :root {
-  /* Backgrounds — dark navy derived from logo #2E4380 */
-  --bg:   #0C1022;
-  --bg-2: #131928;
-  --bg-3: #1A2235;
+  --bg:   var(--gb-bg);
+  --bg-2: var(--gb-bg-subtle);
+  --bg-3: var(--gb-surface-raised);
 
-  /* Borders — alpha white with blue tint */
-  --border-subtle: rgba(255, 255, 255, 0.06);
-  --border:        rgba(255, 255, 255, 0.10);
-  --border-strong: rgba(255, 255, 255, 0.18);
+  --border-subtle: var(--gb-border);
+  --border:        var(--gb-border);
+  --border-strong: var(--gb-border-strong);
 
-  /* Text */
-  --text:   #EFF1F8;
-  --text-2: #9AA5C4;
-  --text-3: #5A6488;
+  --text:   var(--gb-text);
+  --text-2: var(--gb-text-secondary);
+  --text-3: var(--gb-text-muted);
 
-  /* Accent — logo red */
-  --accent:     #C6252E;
-  --accent-dim: rgba(198, 37, 46, 0.12);
-  --accent-mid: rgba(198, 37, 46, 0.20);
+  /* #007BFF — icons, dots, rules, indicators. Not for body text. */
+  --accent:            var(--gb-accent);
+  /* AA-compliant blue for text and links. */
+  --accent-text:       var(--gb-accent-text);
+  --accent-fill:       var(--gb-accent-fill);
+  --accent-fill-hover: var(--gb-accent-fill-hover);
+  --accent-dim:        color-mix(in srgb, var(--gb-blue-500) 10%, transparent);
+  --accent-mid:        color-mix(in srgb, var(--gb-blue-500) 28%, transparent);
 
-  /* Radius */
-  --radius:    6px;
+  --radius:    8px;
   --radius-lg: 12px;
-  --radius-xl: 20px;
+  --radius-xl: 16px;
 
+  /* Card surface contrasts with its section: bg-2 on bg sections, bg on .section-alt. */
+  --card-bg: var(--bg-2);
+  --card-shadow: var(--gb-shadow-sm);
+}
+
+[data-theme="dark"] {
+  --card-shadow: none;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --card-shadow: none;
+  }
 }
 
 @layer base {
   * {
     box-sizing: border-box;
   }
+  html {
+    background-color: var(--bg);
+  }
   body {
     background-color: var(--bg);
     color: var(--text);
-    font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
   ::selection {
-    background-color: var(--accent-dim);
+    background-color: var(--accent-mid);
     color: var(--text);
+  }
+  :focus-visible {
+    outline: 2px solid var(--gb-focus-ring);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* 2px brand hairline — the only UI use of the brand gradient. */
+  .brand-rule {
+    height: 2px;
+    border-radius: 9999px;
+    background: linear-gradient(90deg, var(--gb-blue-500) 0%, var(--gb-violet-500) 50%, var(--gb-pink-500) 100%);
+  }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent-text);
+  }
+
+  .section-alt {
+    --card-bg: var(--bg);
+    background: var(--bg-2);
+    border-block: 1px solid var(--border);
+  }
+
+  .section-title {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    text-wrap: balance;
+  }
+  @media (min-width: 768px) {
+    .section-title {
+      font-size: 34px;
+      line-height: 40px;
+    }
+  }
+
+  .section-intro {
+    font-size: 17px;
+    line-height: 28px;
+    color: var(--text-2);
+    max-width: 42rem;
+    text-wrap: pretty;
+  }
+
+  .label-mono {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .card-title {
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    color: var(--text);
+    text-wrap: balance;
+  }
+
+  .card-body {
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--text-2);
+    text-wrap: pretty;
+  }
+
+  .card {
+    border: 1px solid var(--border);
+    background: var(--card-bg);
+    box-shadow: var(--card-shadow);
+    border-radius: 12px;
+    transition: border-color 200ms ease-out, background-color 200ms ease-out;
+  }
+
+  /* 2px brand hairline along a card's top edge — featured items only. */
+  .card-accent {
+    position: relative;
+    overflow: hidden;
+  }
+  .card-accent::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gb-blue-500) 0%, var(--gb-violet-500) 50%, var(--gb-pink-500) 100%);
+  }
+
+  .chip {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    background: color-mix(in srgb, var(--text) 3%, transparent);
+    color: var(--text-2);
+  }
+
+  .link {
+    color: var(--accent-text);
+    text-decoration: underline;
+    text-decoration-color: color-mix(in srgb, currentColor 40%, transparent);
+    text-underline-offset: 3px;
+    transition: text-decoration-color 150ms ease-out;
+  }
+  .link:hover {
+    text-decoration-color: currentColor;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    padding: 10px 16px;
+    border-radius: 8px;
+    background: var(--accent-fill);
+    color: var(--gb-on-accent);
+    transition: background-color 150ms ease-out;
+  }
+  .btn-primary:hover {
+    background: var(--accent-fill-hover);
+  }
+
+  /* Header logo: lockup swaps with theme; mark-only on small screens. */
+  .logo-lockup-dark { display: none; }
+  [data-theme="dark"] .logo-lockup-light { display: none; }
+  [data-theme="dark"] .logo-lockup-dark { display: block; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .logo-lockup-light { display: none; }
+    :root:not([data-theme="light"]) .logo-lockup-dark { display: block; }
+  }
+
+  /* Hero ground: bg → bg-subtle wash. Dark = brand wash (#070B12 → #0F141D);
+     light = the same treatment in light neutrals (#FFFFFF → #F6F7F9).
+     The vertical fade lands the bottom edge exactly on the page bg so it meets the next section without a seam. */
+  .hero-wash {
+    --hero-tint: color-mix(in srgb, var(--gb-blue-50) 70%, transparent);
+    background:
+      linear-gradient(180deg, transparent 55%, var(--gb-bg) 100%),
+      radial-gradient(55% 60% at 88% 0%, var(--hero-tint) 0%, transparent 70%),
+      linear-gradient(340deg, var(--gb-bg) 0%, var(--gb-bg-subtle) 100%);
+  }
+  [data-theme="dark"] .hero-wash {
+    --hero-tint: color-mix(in srgb, var(--gb-blue-900) 28%, transparent);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .hero-wash {
+      --hero-tint: color-mix(in srgb, var(--gb-blue-900) 28%, transparent);
+    }
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
   }
 }
 

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "financial-operations",
+    "featured": true,
+    "category": "Financial Operations Platform",
+    "contribution": "Fintech · Romanian businesses · iOS, Android & Web",
+    "summary": "A cross-platform financial operations platform for Romanian businesses, bringing together electronic invoicing through RO e-Factura, ANAF-related workflows, company administration, and invoice and payment workflows. As part of the product team, I contributed to complex onboarding journeys, financial interfaces, permissions, and consistent experiences across web and mobile.",
+    "highlights": [
+      "ANAF connection flows during onboarding and in settings",
+      "RO e-Factura invoice screens and invoice downloads",
+      "Invoice and payment-related workflows",
+      "Business registration and multi-step onboarding",
+      "Company and team management",
+      "User roles and permissions",
+      "Financial operations and transaction interfaces",
+      "API integrations behind each journey"
+    ],
+    "stack": [
+      "React Native",
+      "TypeScript",
+      "Web & Mobile",
+      "REST APIs"
+    ]
+  },
+  {
+    "id": "mobile-products",
+    "category": "Mobile apps — fintech, retail & enterprise",
+    "summary": "Multiple React Native apps built from scratch, with white-label component systems and strict TypeScript throughout.",
+    "contribution": "Built from scratch",
+    "stack": [
+      "React Native",
+      "Expo",
+      "TypeScript",
+      "Expo EAS",
+      "REST APIs",
+      "CI/CD"
+    ]
+  },
+  {
+    "id": "crypto-wallet",
+    "category": "Multi-chain crypto wallet",
+    "summary": "One React Native codebase for iOS, Android, and a browser extension, plus a backend that composes app screens remotely.",
+    "contribution": "Cross-platform, built from scratch",
+    "stack": [
+      "React Native",
+      "TypeScript",
+      "Node.js",
+      "Blockchain",
+      "Browser extension"
+    ]
+  },
+  {
+    "id": "marketplace-aggregator",
+    "category": "Blockchain marketplace aggregator",
+    "summary": "On-chain data parsing, transaction building, a marketplace REST API, and the Next.js front end.",
+    "contribution": "Owned end-to-end",
+    "stack": [
+      "Blockchain",
+      "TypeScript",
+      "Next.js",
+      "Node.js",
+      "MongoDB",
+      "PostgreSQL",
+      "REST API"
+    ]
+  },
+  {
+    "id": "live-streaming",
+    "category": "Live video streaming app",
+    "summary": "Led the mobile and backend team — from recruiting and architecture to CI/CD and delivery.",
+    "contribution": "Technical lead",
+    "stack": [
+      "React Native",
+      "Node.js",
+      "Video Streaming",
+      "CI/CD"
+    ]
+  }
+]
